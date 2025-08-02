@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmgklofpa5lu"]
+
+[ext_resource type="Texture2D" uid="uid://ccjtcy25huy10" path="res://assets/GameBg.png" id="1_k0621"]
+[ext_resource type="PackedScene" uid="uid://xwb374ahn0qa" path="res://Scene/Paddle/Paddle.tscn" id="2_ssqj0"]
+
+[sub_resource type="GDScript" id="GDScript_k0621"]
+
+[node name="Game" type="Node2D"]
+script = SubResource("GDScript_k0621")
+
+[node name="BackgroundImage" type="Sprite2D" parent="."]
+position = Vector2(583, 329)
+scale = Vector2(0.63, 0.63)
+texture = ExtResource("1_k0621")
+
+[node name="Paddle" parent="." instance=ExtResource("2_ssqj0")]
+position = Vector2(551, 588)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

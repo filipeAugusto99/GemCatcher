@@ -4,13 +4,15 @@ class_name myGem
 
 signal gem_off_screen
 
-const SPEED: float = 300.0
+const SPEED: float = 300
+
+func _ready() -> void:
+	pass # Replace with function body.
 
 func _process(delta: float) -> void:
-	#Esse codigo faz a gema cair verticalmente
 	position.y += delta * SPEED
-	
-	if position.y > get_viewport_rect().end.y:
+
+	if position.y > Game.get_vpr().end.y:
 		gem_off_screen.emit()
 		die()
 
