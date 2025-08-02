@@ -6,9 +6,7 @@ const MARGIN: int = 47
 func _ready() -> void:
 	pass # Replace with function body.
 
-
-
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
 	'''
 	Essa funcao faz com que o paddle se 
 	movimente ao apertar as teclas A ou D
