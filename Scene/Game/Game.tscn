@@ -12,7 +12,7 @@ scale = Vector2(0.63, 0.63)
 texture = ExtResource("1_k0621")
 
 [node name="Paddle" parent="." instance=ExtResource("2_ssqj0")]
-position = Vector2(542, 585)
+position = Vector2(551, 588)
 
 [node name="Gem" parent="." instance=ExtResource("3_ssqj0")]
 position = Vector2(554, 192)
